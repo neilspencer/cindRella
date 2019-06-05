@@ -6,3 +6,5 @@ master_script.R can be used to run a small example to inspect some results. It s
 other R scripts (data_prep.R, data_run.R, data_evaluate.R, and data_plot.R) to
 create plots that demonstrate fitting our model, competitor models, and variants to synthetic data
 and evaluating it on additional held out synthetic data.
+
+The tar.gz file contains the necessary source package.
