@@ -97,7 +97,7 @@ fit6 <- mcmc_inference_noPhi(shoenums, ntrains, z_init, w_init, w_indices, zhome
                              rhox_init, rhoy_init, nsim ,  print_output = 0)
 
 #fit the simple contact model via optimization (ignore warnings)
-suppressWarnings(exprphis <- fit_contact(traincontacts, naccidentalstrain, traindat, zhometrain, ncategories))
+suppressWarnings(phis <- fit_contact(traincontacts, naccidentalstrain, traindat, zhometrain, ncategories))
 
 # fit the kde model
 gridpredicts <- fit_kde(naccidentalstrain, traindat, grid_memberships)
