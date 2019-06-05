@@ -1,0 +1,12 @@
+#ifndef probabilitytracking_h
+#define probabilitytracking_h
+#include <RcppArmadillo.h>
+#include "common.h"
+
+NumericVector logprob(NumericVector deviationsx, NumericVector deviationsy, NumericVector px, NumericVector py, NumericVector kernelx, NumericVector kernely, double sigma, int Kx, int Ky, int ngrid, NumericVector w, NumericVector w_indices, arma::vec logw, NumericVector U, double q, NumericMatrix Z, NumericMatrix contacts, NumericVector naccidentals, int n, int nshoes, NumericVector logPhi, NumericVector Phi, double qa, double qb, arma::mat wprecision);
+NumericVector logprob_noZ(int ngrid, NumericVector w, NumericVector w_indices, arma::vec logw, NumericVector U, double q, NumericMatrix Z, NumericMatrix contacts, NumericVector naccidentals, int n, int nshoes, NumericVector logPhi, NumericVector Phi, double qa, double qb, arma::mat wprecision);
+NumericVector logprob_now(NumericVector deviationsx, NumericVector deviationsy, NumericVector px, NumericVector py, NumericVector kernelx, NumericVector kernely, double sigma, int Kx, int Ky, int ngrid, NumericVector U, double q, NumericMatrix Z, NumericMatrix contacts, NumericVector naccidentals, int n, int nshoes, NumericVector logPhi, NumericVector Phi, double qa, double qb);
+NumericVector logprob_noepsilon(NumericVector deviationsx, NumericVector deviationsy, NumericVector px, NumericVector py, NumericVector kernelx, NumericVector kernely, double sigma, int Kx, int Ky, int ngrid, NumericVector w, NumericVector w_indices, arma::vec logw, NumericVector zhome, NumericVector z, NumericMatrix zoptions, NumericVector shoenums, NumericVector denoms, NumericMatrix contacts, NumericVector naccidentals, int n, int nshoes, NumericVector logPhi, NumericVector Phi, arma::mat wprecision);
+NumericVector logprob_noepsilonnoZ(NumericVector w_indices, arma::vec logw, NumericVector zhome, NumericVector shoenums, NumericVector denoms, NumericMatrix contacts, NumericVector naccidentals, int n, NumericVector logPhi, NumericVector Phi, arma::mat wprecision);
+NumericVector logprob_noPhi(NumericVector deviationsx, NumericVector deviationsy, NumericVector px, NumericVector py, NumericVector kernelx, NumericVector kernely, double sigma, int Kx, int Ky, int ngrid, NumericVector w, NumericVector w_indices, arma::vec logw, NumericVector U, double q, NumericMatrix Z, NumericVector naccidentals, int n, int nshoes, double qa, double qb, arma::mat wprecision);
+#endif

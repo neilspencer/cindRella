@@ -1,0 +1,14 @@
+Package: cindRella
+Type: Package
+Title: Fits Intensity of Accidental Locations on Shoes
+Version: 0.1.0
+Author: Neil Spencer
+Maintainer: Neil Spencer <nspencer@andrew.cmu.edu>
+Description: Contains example code and data for fitting and plotting the intensity of accidental locations on shoes, as well as evaluating marginal likelihoods. Note that the accidental locations are synthetic.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    Rcpp (>= 0.12.1), ggplot2, RColorBrewer, reshape, plyr, MASS
+LinkingTo:
+    RcppArmadillo, Rcpp
